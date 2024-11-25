@@ -29,19 +29,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install selenium webdriver-manager beautifulsoup4 pandas requests
 
-    # 4. Descarga y configura ChromeDriver
-    - name: Set up ChromeDriver
-      uses: nanasess/setup-chromedriver@v1
-      with:
-        chromedriver-version: latest
-
-    # 5. Descarga y configura Google Chrome
-    - name: Install Google Chrome
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
-
-    # 6. Ejecuta el script de scraping
+    # 4. Ejecuta el script de scraping
     - name: Run web scraping script
       run: |
         python -m pip install notebook
